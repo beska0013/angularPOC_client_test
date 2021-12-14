@@ -1,1 +1,34 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'themes';
+@import '~@nebular/theme/styles/globals';
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@include nb-install() {
+  @include nb-theme-global();
+};
+
+
+
+a{
+  text-decoration: none!important;
+}
+
+img,svg{
+  height: 100%;
+  width: 100%;
+}
+nb-layout-header nav{
+  justify-content: space-between!important;
+}
+
+nb-sidebar#menuSidebar {
+  background-color:transparent!important;
+  width: 5.5rem;
+  height: 100%;
+    & .main-container{
+      width: 5.5rem;
+    }
+}
+
